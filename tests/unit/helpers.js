@@ -1223,8 +1223,10 @@ export function fakeCookies(overrides = {}) {
 
 export const createFakeTracking = (overrides = {}) => {
   return {
+    pageView: sinon.stub(),
     sendEvent: sinon.stub(),
     setDimension: sinon.stub(),
+    setPage: sinon.stub(),
     ...overrides,
   };
 };
